@@ -25,15 +25,14 @@ import {
 } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAE6ET_0SeUY_qJXl-7yIksqs_pp9MWLWs",
-  authDomain: "virtual-notes-56394.firebaseapp.com",
-  projectId: "virtual-notes-56394",
-  storageBucket: "virtual-notes-56394.appspot.com",
-  messagingSenderId: "882486106132",
-  appId: "1:882486106132:web:94ab6957d497136998af01",
-  measurementId: "G-XG8B3X9TRB",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
-
 // init firebase app
 initializeApp(firebaseConfig);
 
