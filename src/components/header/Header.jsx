@@ -10,6 +10,7 @@ import {
   where,
   getDocs,
 } from "../../firebase";
+import { useHistory } from "react-router-dom";
 import { logout, selectUser } from "../../slicer/userSlice";
 import { folder, selectFolders } from "../../slicer/folderSlice";
 import SideBarIcon from "./SideBarIcon";
@@ -20,6 +21,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
   const folders = useSelector(selectFolders);
+  const history = useHistory();
 
   useEffect(() => {
     const q = query(collection(db, "folders"), where("uid", "==", user.uid));
@@ -37,6 +39,7 @@ const Header = () => {
     signOut(auth)
       .then(() => {
         dispatch(logout());
+        history.push("/");
       })
       .catch((error) => {
         console.log(error);
