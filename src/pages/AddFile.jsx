@@ -13,10 +13,14 @@ const AddFile = () => {
     addDoc(collection(db, "folders"), {
       name: fileName,
       uid: user.uid,
-    }).catch((err) => {
-      console.log(err);
-      alert(err);
-    });
+    })
+      .then(() => {
+        window.location.reload();
+      })
+      .catch((err) => {
+        console.log(err);
+        alert(err);
+      });
   };
 
   return (
