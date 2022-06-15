@@ -21,7 +21,7 @@ const AddFile = () => {
 
   return (
     <div className="content-container">
-      <div className="flex items-center justify-center p-12">
+      <div className="flex items-center justify-center p-4 pt-12 ml-14 lg:p-12">
         <div className="mx-auto w-full max-w-[550px]">
           <form action="">
             <div className="mb-5">

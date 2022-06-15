@@ -24,7 +24,7 @@ const NoteChannel = ({ icon, text = "tooltip 💡", folderId }) => {
         return (
           <div key={note.id}>
             <Link
-              className="hover:shadow-form rounded-md bg-white py-2 px-4 text-base font-semibold text-green-600 outline-none"
+              className="hover:shadow-form rounded-md bg-white py-1 px-2 lg:py-2 lg:px-4 text-base font-semibold text-green-600 outline-none"
               to={`/edit-note/${note.id}`}
             >
               {note.title}

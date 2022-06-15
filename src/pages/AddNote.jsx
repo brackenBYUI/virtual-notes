@@ -26,7 +26,7 @@ const AddNote = () => {
 
   return (
     <div className="content-container">
-      <div className="flex items-center justify-center p-12">
+      <div className="flex items-center justify-center p-4 pt-12 ml-14 lg:p-12">
         <div className="mx-auto w-full max-w-[850px]">
           <form action="">
             <div className="mb-5 h-[70vh]">
@@ -62,7 +62,7 @@ const AddNote = () => {
             <div>
               <button
                 onClick={addNote}
-                className="hover:shadow-form rounded-md bg-green-600 py-3 px-8 text-base font-semibold text-white outline-none"
+                className="mt-4 lg:mt-0 hover:shadow-form rounded-md bg-green-600 py-3 px-8 text-base font-semibold text-white outline-none"
               >
                 Add Note
               </button>
