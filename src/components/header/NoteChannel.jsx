@@ -42,7 +42,7 @@ const NoteChannel = ({ icon, text = "tooltip 💡", folderId }) => {
         <SideBarIcon icon={icon} link={"#"} text={text} />
       </div>
       {expanded && (
-        <div className="fixed">
+        <div className="absolute top-0 z-[-10]">
           <div className="channel-bar shadow-lg p-8 h-screen top-0">
             <NoteBlock folderId={folderId} />
             <div className="channel-container">
